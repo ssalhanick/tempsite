@@ -1,3 +1,26 @@
 header h1{
    color: #ffffff;
+   display: inline;
+}
+
+header img{
+   display: inline;
+   width: 5%;
+   position: relative;
+   top: 30px;
+}
+
+#headshot{
+}
+
+#headshot img{
+   display: block;
+   width: 50%;
+   border-radius: 5000px;
+   margin: 0 auto;
+   vertical-align: middle;
+}
+
+footer{
+   padding: 20px 0;
 }

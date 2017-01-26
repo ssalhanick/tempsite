@@ -16,7 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
@@ -38,19 +38,19 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li>
-                <a href="#top" onclick=$("#menu-close").click();>Home</a>
+                <a href="#top" onclick=$( "#menu-close").click();>Home</a>
             </li>
             <li>
-                <a href="#about" onclick=$("#menu-close").click();>About Me</a>
+                <a href="#about" onclick=$( "#menu-close").click();>About Me</a>
             </li>
             <li>
-                <a href="#skills" onclick=$("#menu-close").click();>My Skills</a>
+                <a href="#skills" onclick=$( "#menu-close").click();>My Skills</a>
             </li>
             <li>
-                <a href="#portfolio" onclick=$("#menu-close").click();>My Portfolio</a>
+                <a href="#portfolio" onclick=$( "#menu-close").click();>My Portfolio</a>
             </li>
             <li>
-                <a href="#contact" onclick=$("#menu-close").click();>Contact Me</a>
+                <a href="#contact" onclick=$( "#menu-close").click();>Contact Me</a>
             </li>
         </ul>
     </nav>
@@ -58,9 +58,8 @@
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>Scott Salhanick's Portfolio</h1>
-            <br>
-            <a href="#about" class="btn btn-dark btn-lg">Who am I?</a>
+           <img src="img/logo.png" alt="">
+            <h1>&nbsp;Scott Salhanick's Portfolio</h1>
         </div>
     </header>
 
@@ -68,10 +67,16 @@
     <section id="about" class="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p class="lead">I wear many hats. Usually, you would think of a person that wears many hats as a person with perpetual bad hair days. From my profile picture, I think you can tell that I am never have a bad hair day. The hats I wear are print, web, video, and multimedia. </p>
-
-<p>No one is perfect at everything, most people find their niche and stick with it. That's where I differ. I have a yearning for learning that I can probably attribute to growing up in the age of the internet. Improving and expanding upon my skill sets is a personal passion that I take pride in. </p>
+                <div class="col-lg-12">
+                    <div class="row" id="about-contain">
+                        <div class="col-lg-4" id="headshot">
+                            <img src="img/headshot.jpg" alt="">
+                        </div>
+                        <div class="col-lg-8 text-center" id="copy">
+                            <p class="lead">I wear many hats. Usually, you would think of a person that wears many hats as a person with perpetual bad hair days. From my picture, I think you can tell that I am never have a bad hair day. The hats I wear are print, web, video, and multimedia. </p>
+                            <p>No one is perfect at everything, most people find their niche and stick with it. That's where I differ. I have a yearning for learning that I can probably attribute to growing up in the age of the internet. Improving and expanding upon my skill sets is a personal passion that I take pride in. </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- /.row -->
@@ -163,32 +168,32 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-htmlemail-1.jpg">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-htmlemail-1.jpg">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-htmlemail-2.jpg">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-htmlemail-2.jpg">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-webdesign-4.jpg">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-webdesign-4.jpg">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-webdesign-5.jpg">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-webdesign-5.jpg">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-webdesign-1.jpg">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-webdesign-1.jpg">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-webdesign-2.jpg">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-webdesign-2.jpg">
                             </div>
                         </div>
                     </div>
@@ -252,76 +257,76 @@
 
     <!-- Custom Theme JavaScript -->
     <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function() {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function() {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
                 }
             }
         });
-    });
-    //#to-top button appears after scrolling
-    var fixed = false;
-    $(document).scroll(function() {
-        if ($(this).scrollTop() > 250) {
-            if (!fixed) {
-                fixed = true;
-                // $('#to-top').css({position:'fixed', display:'block'});
-                $('#to-top').show("slow", function() {
-                    $('#to-top').css({
-                        position: 'fixed',
-                        display: 'block'
-                    });
-                });
-            }
-        } else {
-            if (fixed) {
-                fixed = false;
-                $('#to-top').hide("slow", function() {
-                    $('#to-top').css({
-                        display: 'none'
-                    });
-                });
-            }
-        }
-    });
-    // Disable Google Maps scrolling
-    // See http://stackoverflow.com/a/25904582/1607849
-    // Disable scroll zooming and bind back the click event
-    var onMapMouseleaveHandler = function(event) {
-        var that = $(this);
-        that.on('click', onMapClickHandler);
-        that.off('mouseleave', onMapMouseleaveHandler);
-        that.find('iframe').css("pointer-events", "none");
-    }
-    var onMapClickHandler = function(event) {
+        // Disable Google Maps scrolling
+        // See http://stackoverflow.com/a/25904582/1607849
+        // Disable scroll zooming and bind back the click event
+        var onMapMouseleaveHandler = function(event) {
             var that = $(this);
-            // Disable the click handler until the user leaves the map area
-            that.off('click', onMapClickHandler);
-            // Enable scrolling zoom
-            that.find('iframe').css("pointer-events", "auto");
-            // Handle the mouse leave event
-            that.on('mouseleave', onMapMouseleaveHandler);
+            that.on('click', onMapClickHandler);
+            that.off('mouseleave', onMapMouseleaveHandler);
+            that.find('iframe').css("pointer-events", "none");
         }
-        // Enable map zooming with mouse scroll when the user clicks the map
-    $('.map').on('click', onMapClickHandler);
+        var onMapClickHandler = function(event) {
+                var that = $(this);
+                // Disable the click handler until the user leaves the map area
+                that.off('click', onMapClickHandler);
+                // Enable scrolling zoom
+                that.find('iframe').css("pointer-events", "auto");
+                // Handle the mouse leave event
+                that.on('mouseleave', onMapMouseleaveHandler);
+            }
+            // Enable map zooming with mouse scroll when the user clicks the map
+        $('.map').on('click', onMapClickHandler);
     </script>
 
 </body>
