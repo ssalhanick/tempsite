@@ -4,10 +4,7 @@ header h1{
 }
 
 header img{
-   display: inline;
-   width: 5%;
-   position: relative;
-   top: 30px;
+   width: 170%;
 }
 
 #headshot{
@@ -23,4 +20,10 @@ header img{
 
 footer{
    padding: 20px 0;
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+   header img{ width: 33%;}
 }
